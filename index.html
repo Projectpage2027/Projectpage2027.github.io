@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f6" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="RoboWorld100 is a framework for learning and evaluating robot world models from diverse play across real and simulated environments."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RoboWorld100" />
+    <meta
+      property="og:description"
+      content="A unified framework for learning and evaluating robot world models from diverse play."
+    />
+    <meta property="og:image" content="https://projectpage2027.github.io/assets/teaser.png" />
+    <title>RoboWorld100 — Learning and Evaluating Robot World Models</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="RoboWorld100, back to top">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>RoboWorld<span class="brand-number">100</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#overview">Overview</a>
+          <a href="#framework">Framework</a>
+          <a href="#evaluation">Evaluation</a>
+          <a href="#resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Research project · Robot world models</div>
+          <h1 id="hero-title">RoboWorld<span>100</span></h1>
+          <p class="hero-subtitle">A Unified Framework for Learning and Evaluating Robot World Models from Diverse Play</p>
+          <p class="hero-summary">
+            World models need to predict what robot actions actually cause, including imperfect interactions.
+            RoboWorld100 brings diverse play data, unified processing, and consequence-aware evaluation into one framework.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#overview">Explore the project <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#framework">See the framework <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="visual-section" aria-label="RoboWorld100 overview figure">
+        <div class="container">
+          <figure class="figure-card teaser-card">
+            <a href="assets/teaser.png" target="_blank" rel="noopener" aria-label="Open the RoboWorld100 overview figure at full size">
+            <img
+              src="assets/teaser.png"
+              alt="RoboWorld100 overview showing task categories, varied robot and camera platforms, real interaction scenes, and the evaluation design."
+              width="2200"
+              height="1284"
+              fetchpriority="high"
+            />
+            </a>
+            <figcaption>RoboWorld100 spans diverse interactions and evaluates predicted outcomes against real executions. Select the figure to view it at full size.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section overview-section" id="overview" aria-labelledby="overview-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">01 / The motivation</p>
+            <h2 id="overview-title">Beyond visually plausible futures.</h2>
+            <p>
+              A generated video can look convincing while predicting the wrong result of an action.
+              Play interactions expose contact, slips, misses, and recovery that success-focused demonstrations can overlook.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-index">01</span>
+              <div class="feature-icon feature-icon-blue" aria-hidden="true">◎</div>
+              <h3>Diverse play</h3>
+              <p>Human-guided exploration captures a broader range of physical interactions and action outcomes.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-index">02</span>
+              <div class="feature-icon feature-icon-teal" aria-hidden="true">⇄</div>
+              <h3>Unified training data</h3>
+              <p>Source-specific processing aligns observations and motion into video–action sequences.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-index">03</span>
+              <div class="feature-icon feature-icon-orange" aria-hidden="true">⌁</div>
+              <h3>Meaningful evaluation</h3>
+              <p>Matched predictions are assessed for visual quality, action consistency, and task progress.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section coverage-section" aria-labelledby="coverage-title">
+        <div class="container coverage-layout">
+          <div class="coverage-copy">
+            <p class="kicker">Breadth by design</p>
+            <h2 id="coverage-title">100+ task settings.<br />Ten interaction categories.</h2>
+            <p>
+              RoboWorld100 spans real and simulated environments, varied embodiments, and camera configurations.
+              The task taxonomy guides collection toward distinct manipulation and physical challenges.
+            </p>
+          </div>
+          <div class="category-list" aria-label="Ten interaction categories">
+            <span>Basic manipulation</span>
+            <span>Dynamic interaction</span>
+            <span>Articulated objects</span>
+            <span>Precision manipulation</span>
+            <span>Deformable objects</span>
+            <span>Tool use</span>
+            <span>Memory &amp; occlusion</span>
+            <span>Large-workspace motion</span>
+            <span>Long-horizon tasks</span>
+            <span>Physical interactions</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section framework-section" id="framework" aria-labelledby="framework-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">02 / The framework</p>
+            <h2 id="framework-title">From interaction to prediction.</h2>
+            <p>
+              A common pipeline turns heterogeneous recordings into world-model training examples,
+              then compares generated videos with held-out real executions.
+            </p>
+          </div>
+          <figure class="figure-card pipeline-card">
+            <a href="assets/pipeline.png" target="_blank" rel="noopener" aria-label="Open the RoboWorld100 pipeline figure at full size">
+            <img
+              src="assets/pipeline.png"
+              alt="Three-stage pipeline: collect human play across robots, handheld devices, and direct hand interactions; align video and motion using source-specific processing; train world models and evaluate matched predictions."
+              width="1800"
+              height="1147"
+              loading="lazy"
+            />
+            </a>
+            <figcaption>Collection, source-specific processing, and matched evaluation form one connected workflow. Select the figure to view it at full size.</figcaption>
+          </figure>
+          <div class="steps">
+            <div><span>01</span><h3>Collect</h3><p>Record exploratory interactions across tasks and platforms.</p></div>
+            <div><span>02</span><h3>Adapt</h3><p>Synchronize video and motion with platform-specific pipelines.</p></div>
+            <div><span>03</span><h3>Evaluate</h3><p>Compare predicted consequences with real trajectories.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section evaluation-section" id="evaluation" aria-labelledby="evaluation-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="kicker">03 / Evaluation</p>
+            <h2 id="evaluation-title">Three views of a world model.</h2>
+            <p>Visual fidelity alone does not tell us whether a model followed the action or preserved the task outcome.</p>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card metric-blue">
+              <div class="metric-top"><span>01</span><span class="metric-line" aria-hidden="true"></span></div>
+              <h3>Visual quality</h3>
+              <p>Compare generated and real observations at the pixel and video-feature levels.</p>
+              <span class="metric-caption">What does the future look like?</span>
+            </article>
+            <article class="metric-card metric-teal">
+              <div class="metric-top"><span>02</span><span class="metric-line" aria-hidden="true"></span></div>
+              <h3>Action consistency</h3>
+              <p>Use platform-specific inverse dynamics models to assess the motion implied by video.</p>
+              <span class="metric-caption">Did the model follow the action?</span>
+            </article>
+            <article class="metric-card metric-orange">
+              <div class="metric-top"><span>03</span><span class="metric-line" aria-hidden="true"></span></div>
+              <h3>Task progress</h3>
+              <p>Compare Robometer-estimated progress curves for predicted and real executions.</p>
+              <span class="metric-caption">Did the task unfold the same way?</span>
+            </article>
+          </div>
+          <p class="evaluation-note">Progress-curve similarity measures agreement between trajectories; it is not a task success rate.</p>
+        </div>
+      </section>
+
+      <section class="section resources-section" id="resources" aria-labelledby="resources-title">
+        <div class="container resources-layout">
+          <div>
+            <p class="kicker">04 / Resources</p>
+            <h2 id="resources-title">More to come.</h2>
+            <p>The manuscript, code, and data links will appear here when ready for release.</p>
+          </div>
+          <div class="resources-grid">
+            <div class="resource-card"><span class="resource-symbol" aria-hidden="true">↗</span><strong>Paper</strong><span>Coming soon</span></div>
+            <div class="resource-card"><span class="resource-symbol" aria-hidden="true">⌘</span><strong>Code</strong><span>Coming soon</span></div>
+            <div class="resource-card"><span class="resource-symbol" aria-hidden="true">▤</span><strong>Dataset</strong><span>Coming soon</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>RoboWorld<span class="brand-number">100</span></span>
+        <span>An anonymous research project page.</span>
+      </div>
+    </footer>
+  </body>
+</html>
