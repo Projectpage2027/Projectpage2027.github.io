@@ -1,6 +1,6 @@
 # RoboWorld100
 
-Anonymous project page for double-blind review: https://projectpage2027.github.io/
+Anonymous project page for double-blind review: https://roboworld100.github.io/
 
 This repository contains the static website. GitHub Pages publishes the `main` branch from the repository root.
 
